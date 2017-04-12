@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login_final"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.abhacharya.eventjockey.LoginActivity"
+    tools:showIn="@layout/activity_login_final"
+    android:background="#743EBE">
+
+    <EditText
+        android:id="@+id/emailID"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Email ID"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Password"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:layout_below="@+id/emailID"
+        android:layout_alignStart="@+id/emailID"
+        android:layout_marginTop="48dp">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:id="@+id/login"
+        android:background="@drawable/login"
+        android:layout_above="@+id/register"
+        android:layout_alignStart="@+id/register"
+        android:layout_marginBottom="25dp" />
+
+    <CheckBox
+        android:text="Remenber me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/remember"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:id="@+id/register"
+        android:background="@drawable/register"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+
+

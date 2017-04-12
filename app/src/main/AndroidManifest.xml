@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.abhacharya.eventjockey">
+
+    <!-- Permissions -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Google MAP API key -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ej"
+        android:label="EJ"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAKZpiA4BK6i0Bl-jKqHI2R2BKDeXuwFDY" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstIndex"
+            android:label="@string/title_activity_first_index"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".EventActivity"
+            android:label="@string/title_activity_event"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.abhacharya.eventjockey.FirstEventActivity" />
+        </activity>
+        <activity
+            android:name=".FirstEventActivity"
+            android:label="@string/title_activity_first_event"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.abhacharya.eventjockey.FirstIndex" />
+        </activity>
+        <activity
+            android:name=".RealEvent"
+            android:label="@string/title_activity_real_event"
+            android:parentActivityName=".FirstIndex"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.abhacharya.eventjockey.FirstIndex" />
+        </activity>
+        <activity
+            android:name=".RealEvent2"
+            android:label="@string/title_activity_real_event2"
+            android:parentActivityName=".RealEvent"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.abhacharya.eventjockey.RealEvent" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_Login_Activity"
+            android:parentActivityName=".RealEvent"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.abhacharya.eventjockey.RealEvent" />
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/NoActionBar"></activity>
+    </application>
+
+</manifest>
